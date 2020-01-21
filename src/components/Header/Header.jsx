@@ -1,9 +1,12 @@
 import React from 'react'
 
 const Header = () => {
-    return (
-        <h2 className='mt-5'>ToDo List</h2>
-    )
+  return (
+    <div>
+      <h2 className='mt-5 mb-0'>Simple todo List</h2>
+      <p>by abdulirsyad</p>
+    </div>
+  )
 }
 
 export default Header

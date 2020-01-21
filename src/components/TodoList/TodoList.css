@@ -25,3 +25,7 @@ ul li .remove-icon{
 ul li .remove-icon:hover{
 	color: #6382db;
 }
+
+p.empty-list {
+	font-size: 20px;
+}

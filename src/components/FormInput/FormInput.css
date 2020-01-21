@@ -1,0 +1,23 @@
+.input-list{
+	margin-top: 30px;
+}
+
+.input-list .col-8{
+	padding-right: 3px;
+}
+
+.input-list .col-4{
+	padding-left: 3px;
+}
+
+button.btn{
+	cursor: pointer;
+	width: 100%;
+	background-color: #7295fa;
+	color: #fff;
+}
+
+button.btn:hover{
+	background-color: #6382db; 
+	color: #fff;
+}
