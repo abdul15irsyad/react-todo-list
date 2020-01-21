@@ -9,7 +9,10 @@ class App extends Component {
   }
   
   addList = (newList) =>{
-    newList.id = this.state.list.length + 1
+    var lastlist = this.state.list.reverse().find((x)=> x.id > this.state.list.length)
+    this.state.list.reverse()
+    var lastid = lastlist ? lastlist.id : this.state.list.length
+    newList.id = lastid + 1
     this.setState({
       ...this.state,
       list: [...this.state.list,newList]
@@ -28,9 +31,11 @@ class App extends Component {
     return (
       <div className="App container">
         <div className="row justify-content-center">
-          <div className="col-lg-5 text-center">
+          <div className="col-xl-5">
             <Header/>
-            <TodoList list={this.state.list} removeList={(this.removeList)}/>
+            <ul>
+              <TodoList list={this.state.list} removeList={(this.removeList)}/>
+            </ul>
             <FormInput addList={(newList) =>this.addList(newList)}/>
           </div>
         </div>
